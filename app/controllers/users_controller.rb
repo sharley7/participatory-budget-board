@@ -1,10 +1,15 @@
 class UsersController < ApplicationController
 
-  configure do
-    set :views, 'app/views'
-    enable :sessions
-    set :session_secret, "secret"
+  get '/signup' do
+    if logged_in? == false
+      erb :'/users/new'
+    else
+      redirect to '/proposals'
+    end
   end
+
+
+
 
 
 end
