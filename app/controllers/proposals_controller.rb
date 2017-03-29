@@ -15,10 +15,10 @@ class ProposalsController < ApplicationController
 
    post '/proposals' do
      if params[:title] == "" || params[:content] == "" || params[:neighborhood_id] == ""
-         @proposal = Proposal.create(title: params[:title], content: params[:content], neighborhood_id: params[:neighborhood_id], user_id: params[:user_id])}
-         redirect to '/proposals'
+         redirect to '/proposals/new'
       else
-        redirect to '/proposals/new'
+        @proposal = Proposal.create(title: params[:title], content: params[:content], neighborhood_id: params[:neighborhood_id], user_id: params[:user_id])
+        redirect to '/proposals'
    end
  end
 

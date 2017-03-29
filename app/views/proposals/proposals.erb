@@ -1,0 +1,18 @@
+<ul>
+<% Proposal.all.each do |proposal| %>
+  <li><h2><%= proposal.title%></h2></li>
+  <li>
+    <h3> Neighborhood: <%= proposal.neighborhood.name %></h3>
+  </li>
+  <li>
+    <p>
+      <%= proposal.content %>
+    </p>
+  </li>
+  <li>
+    <p>
+      --Submitted by <%=proposal.user_id.name %>
+    </p>
+  </li>
+<% end %>
+  </ul>
