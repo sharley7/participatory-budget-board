@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Participatory Budget Board</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,12 +19,27 @@
     <![endif]-->
   </head>
   <body>
-    <video autoplay loop muted poster="screenshot.jpg" id="background">
-    09
-            <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
-    10
-        </video>
-    <%= yield %>
+
+	<video autoplay loop muted poster="screenshot.jpg" id="background">
+		<source src="/videos/city-street.mp4" type="video/mp4">
+	</video>
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-sm-12-fluid">
+
+<h1>Participatory Budget Board</h1>
+<h2>Northeast Brooklyn</h2>
+<%= yield %>
+
+			</div>
+
+		</div>
+
+	</div>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
