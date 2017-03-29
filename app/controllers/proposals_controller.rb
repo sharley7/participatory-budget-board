@@ -23,4 +23,9 @@ class ProposalsController < ApplicationController
    end
  end
 
+   get '/proposals/:id' do
+     @proposal = Proposal.find_by(id: params[:id])
+     erb :'/proposals/show'
+   end
+
 end
