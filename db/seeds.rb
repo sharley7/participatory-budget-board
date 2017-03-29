@@ -1,5 +1,4 @@
 Neighborhood.destroy_all
-User.destroy_all
 Proposal.destroy_all
 
 nw_brooklyn_list = ["Brooklyn Heights",
@@ -77,13 +76,13 @@ end
 proposals_list = {
     "A new dog park" => {
       :content => "The population of downtown Brooklyn is exploding. With so many new dog-friendly buildings, it would be wonderful to have a dog park in the downtown area.",
-      :user_id => 1,
-      :neighborhood_id => 5
+      :user_id => 13,
+      :neighborhood_id => 89
     },
     "More bike lanes" => {
       :content => "More bike lanes would make it easier to get around the neighborhood.",
-      :user_id => 3,
-      :neighborhood_id => 8
+      :user_id => 15,
+      :neighborhood_id => 91
     },
   }
 
