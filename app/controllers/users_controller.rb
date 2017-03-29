@@ -45,7 +45,7 @@ class UsersController < ApplicationController
       session.clear
       redirect to '/'
     else
-      redirec to '/login'
+      redirect to '/login'
     end
   end
 
