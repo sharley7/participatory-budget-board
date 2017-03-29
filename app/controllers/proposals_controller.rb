@@ -1,10 +1,11 @@
+require 'pry'
 class ProposalsController < ApplicationController
 
    get '/proposals' do
      erb :'/proposals/proposals'
    end
 
-   get '/new' do
+   get '/proposals/new' do
      if logged_in?
        erb :'/proposals/new'
      else
@@ -13,6 +14,7 @@ class ProposalsController < ApplicationController
    end
 
    post '/proposals' do
+     binding.pry
      redirect to '/proposals'
    end
 

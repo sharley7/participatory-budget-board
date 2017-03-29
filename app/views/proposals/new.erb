@@ -1,0 +1,13 @@
+<form method="POST" action="/proposals">
+<p><label>Title:</label> <input type="text" name="username" id="username" placeholder="Give our proposal a title" /></p>
+<p><label>Your proposal:</label> <textarea name="content" id="content" placeholder="I propose...." /></textarea></p>
+<p><label>Select the neighborhood:</label>
+    <br />
+  <% Neighborhood.all.each do |neighborhood| %>
+  <input type="radio" name="neighborhood_id"  id="neighborhood_<%=neighborhood.id%>" value="<%=neighborhood.id%>" > <%=neighborhood.name%></input>
+  <% end %></p>
+  <input type="hidden" value="<%=session[:user_id]%>" name="user_id">
+
+<p>
+<input type="submit" value="Submit" />
+</form></p>
