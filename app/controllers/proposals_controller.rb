@@ -28,6 +28,12 @@ class ProposalsController < ApplicationController
    end
  end
 
+  post '/vote' do
+    @proposal = find_by(params[:proposal_id])
+    @proposal.vote
+    redirect to '/proposals'
+  end
+
 
 
 end
