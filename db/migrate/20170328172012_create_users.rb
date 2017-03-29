@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       f.string :username
       f.string :email
       f.string :password_digest
-      f.string :neighborhood
+      f.string :neighborhood_id
   end
  end
 end

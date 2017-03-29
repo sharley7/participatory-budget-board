@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20170329024140) do
     t.string "username"
     t.string "email"
     t.string "password_digest"
-    t.string "neighborhood"
+    t.string "neighborhood_id"
   end
 
 end
