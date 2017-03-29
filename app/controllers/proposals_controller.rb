@@ -1,12 +1,19 @@
 class ProposalsController < ApplicationController
 
    get '/proposals' do
-    if logged_in?
-     erb: '/proposals/proposals'
-   else
-     redirect to '/signup'
-     end
-   end 
+     erb :'/proposals/proposals'
+   end
 
+   get '/new' do
+     if logged_in?
+       erb :'/proposals/new'
+     else
+       redirect to '/proposals'
+     end
+   end
+
+   post '/proposals' do
+     redirect to '/proposals'
+   end
 
 end
