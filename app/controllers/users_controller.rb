@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     end
   end
 
-  post 'signup' do
+  post '/signup' do
     if params[:username] == "" || params[:email] == "" | params[:password] == "" || params[:neighborhood_id] == ""
        redirect to '/signup'
     else
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       @user.save
       session[:user_id] = @user.id
       redirect to '/proposals'
-    end 
+    end
   end
 
 
