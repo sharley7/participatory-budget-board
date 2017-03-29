@@ -6,5 +6,7 @@ end
 
 use Rack::MethodOverride
 
-
+use NeighborhoodsController 
+use UsersController
+use ProposalsController
 run ApplicationController
