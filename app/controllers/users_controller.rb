@@ -19,6 +19,14 @@ class UsersController < ApplicationController
     end
   end
 
+  get '/login' do
+    if logged_in?
+      redirect to '/proposals'
+    else
+      erb :'/users/login'
+    end
+   end 
+
 
 
 
