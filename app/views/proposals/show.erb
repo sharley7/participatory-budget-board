@@ -1,0 +1,16 @@
+<ul>
+  <li><h2><%= @proposal.title%></h2></li>
+    <li>
+      <h3><%=@proposal.neighborhood.name%></h3>
+    </li>
+  <li>
+    <p>
+      <%= @proposal.content %>
+    </p>
+  </li>
+  <li>
+    <p>
+      --Submitted by <%= @proposal.user.username %>
+    </p>
+  </li>
+  </ul>
