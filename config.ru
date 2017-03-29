@@ -6,6 +6,5 @@ end
 
 use Rack::MethodOverride
 
-use UsersController
-use ProposalsController
+
 run ApplicationController
