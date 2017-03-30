@@ -88,3 +88,9 @@ p {
 section {
     padding: 1%;
 }
+
+#author p {
+      color: #808080;
+      font-weight: boldest;
+
+}

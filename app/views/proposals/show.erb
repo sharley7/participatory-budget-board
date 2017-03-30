@@ -30,13 +30,20 @@
       <%= @proposal.content %>
     </p>
 
-
-
-    <p>
-      --Submitted by <%= @proposal.user.username %>
-    </p>
-
   </div>
+</div>
+
+<div class="row thin">
+  <div class="col-sm-4" id="author">
+    <p>
+      Submitted by <%= @proposal.user.username %>
+    </p>
+  </div>
+
+  <div class="col-sm-2 col-sm-offset-6">
+    VOTE
+  </div>
+
 </div>
 
   </section>
