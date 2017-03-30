@@ -9,9 +9,7 @@ class ProposalsController < ApplicationController
     end
   end
 
-  get '/proposals' do
-    erb :'/proposals/proposals'
-  end
+
 
    get '/proposals/:id' do
      @proposal = Proposal.find_by(id: params[:id])
@@ -42,10 +40,14 @@ class ProposalsController < ApplicationController
  end
 
   post '/proposals/:id/vote' do
-    @proposal = Proposal.find_by(params[:id])
+    @proposal = Proposal.find_by(id: params[:id])
     @proposal.vote
     @proposal.save
-    redirect to '/proposals/#{@proposal.id}'
+    redirect to "/proposals/#{@proposal.id}"
+  end
+
+  get '/proposals' do
+    erb :'/proposals/proposals'
   end
 
 end
