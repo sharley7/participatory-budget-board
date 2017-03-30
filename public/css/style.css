@@ -36,15 +36,18 @@ p {
 
 .row #proposal ul {
       list-style-type: none;
+      margin: 0;
+      padding: 0;
 }
 .row #proposal h2 {
       font-size: 1.8em ;
-      color: #A9A9A9;
+      color: #000000;
+      font-weight: bolder;
 }
 .row #proposal h3 {
       font-size: 1.2em;
       color: #808080;
-      font-weight: lighter;
+      font-weight: bolder;
 }
 
 .row #proposal hr {
