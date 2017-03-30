@@ -34,25 +34,28 @@ p {
   padding-bottom: 20px;
 }
 
-.row #proposal ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+.thin {
+  padding: 0;
+  margin: 0;
 }
+
+
 .row #proposal h2 {
-      font-size: 1.8em ;
+      font-size: 2 em ;
       color: #000000;
       font-weight: bolder;
+      margin-bottom: 3%;
 
 }
 .row #proposal h3 {
       font-size: 1.2em;
       color: #808080;
-      font-weight: bolder;
-
+      font-weight: thinner;
+      margin: 0;
 }
 
 .row #proposal hr {
+      margin-top: 1%;
       adding: 0;
       border: none;
       border-top: medium double #A9A9A9;
