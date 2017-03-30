@@ -9,9 +9,19 @@
     z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(polina.jpg) no-repeat;
+    background: url(/images/Brooklyn_Heights.jpg) no-repeat;
     background-size: cover;
 }
+
+.full {
+  background: url(/images/Brooklyn_Heights.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
 .col-md-12 h1 {
     color: #FF69B4;
 }

@@ -18,31 +18,32 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-
-	<video autoplay loop muted poster="screenshot.jpg" id="background">
+  <!-- Full page background -->
+  <body class="full">
+<!-- Conditional statement includes video background only the index -->
+ <% if request.path_info == "/" %>
+<div class="container">
+    <video autoplay loop muted poster="/images/Brooklyn_Heights.jpg" id="background">
 		<source src="/videos/city-street.mp4" type="video/mp4">
 	</video>
-
-<div class="container">
-
-<div class="row">
-
-<div class="col-sm-12-fluid">
-
-<h1>Participatory Budget Board</h1>
-<h2>Northeast Brooklyn</h2>
-</div></div>
+  <% else %>
+  <% end %>
+  <div class="container">
+    <div class="row">
+      <header>
+    <div class="col-sm-12-fluid">
+    <h1>Participatory Budget Board</h1>
+    <h2>Northeast Brooklyn</h2>
+        </header>
+      </div>
+  </div>
 <%= yield %>
 
-			
-
 	</div>
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
   </body>
 </html>
