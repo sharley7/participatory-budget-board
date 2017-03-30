@@ -1,23 +1,23 @@
 require 'pry'
 class ProposalsController < ApplicationController
 
+  get '/proposals/new' do
+    if logged_in?
+      erb :'/proposals/new'
+    else
+      redirect to '/proposals'
+    end
+  end
+
+  get '/proposals' do
+    erb :'/proposals/proposals'
+  end
 
    get '/proposals/:id' do
      @proposal = Proposal.find_by(id: params[:id])
      erb :'/proposals/show'
    end
 
-   get '/proposals/new' do
-     if logged_in?
-       erb :'/proposals/new'
-     else
-       redirect to '/proposals'
-     end
-   end
-
-      get '/proposals' do
-        erb :'/proposals/proposals'
-      end
 
    post '/proposals' do
      if params[:title] == "" || params[:content] == "" || params[:neighborhood_id] == ""
@@ -33,7 +33,6 @@ class ProposalsController < ApplicationController
  end
 
  post '/proposal/:id/edit' do
-
    if params[:title] == "" || params[:content] == "" || params[:neighborhood_id] == ""
      redirect to "/proposal/#{@proposal.id/edit}"
   else
