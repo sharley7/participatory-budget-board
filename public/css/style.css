@@ -58,10 +58,11 @@ p {
 
 }
 .row #proposal h3 {
-      font-size: 1.2em;
+      font-size: 1em;
       color: #808080;
       font-weight: thinner;
       margin: 0;
+      font-style: italic;
 }
 
 .double-line {
@@ -86,7 +87,7 @@ p {
 
 #proposal p {
   color: #808080;
-  font-size: 1.1em;
+  font-size: 1.2em;
   line-height: 1.5em;
 }
 
@@ -101,14 +102,15 @@ section {
 #author p {
       color: #808080;
       font-weight: bolder;
-      font-size: .9em;
+      font-size: 1em;
+
 }
 
 #vote {
      background-color: white;
      color: #808080;
      border: 1px solid #808080;
-     font-size: 1.1em;
+     font-size: 1em;
      float: left;
 }
 
@@ -118,6 +120,6 @@ section {
   color: #808080;
   border: 1px solid #808080;
   border-left: 0px;
-  font-size: 1.1em;
+  font-size: 1em;
 
 }
