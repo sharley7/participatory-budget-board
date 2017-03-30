@@ -46,10 +46,11 @@
     </p>
   </div>
 
-  <div class="col-sm-2 col-sm-offset-6">
+  <div class="col-sm-3 col-sm-offset-5">
     <form method="post" action="/proposals/<%=@proposal.id%>/vote">
     <input id="hidden" type="hidden" name="_method" value="post">
     <input type="submit" id="vote" value="vote">
+    <input type="button" id="vote_total" value="<%=@proposal.vote_total%>">
     </form>
   </div>
 

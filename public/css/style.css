@@ -106,7 +106,18 @@ section {
 
 #vote {
      background-color: white;
-     color: black;
+     color: #808080;
      border: 1px solid #808080;
-     font-size: .9em;
+     font-size: 1.1em;
+     float: left;
+}
+
+#vote_total {
+  float: left;
+  background-color: white;
+  color: #808080;
+  border: 1px solid #808080;
+  border-left: 0px;
+  font-size: 1.1em;
+
 }
