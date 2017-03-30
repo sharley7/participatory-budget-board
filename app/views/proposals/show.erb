@@ -1,25 +1,44 @@
 
 <div class="row">
 <div class="col-sm-8 col-sm-offset-2 white-bg">
-  <section id="proposal">
-<ul>
-  <li><h2><%= @proposal.title%></h2></li>
 
-    <li>
-      <h3><%=@proposal.neighborhood.name%></h3>
-    </li>
-    <hr />
-  <li>
+
+<section id="proposal">
+
+  <div class="row">
+    <div class="col-sm-8">
+
+      <h2><%= @proposal.title%></h2></li>
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-sm-4">
+       <h3><%=@proposal.neighborhood.name%></h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <hr />
+      </div>
+    </div>
+
+<div class="row">
+  <div class="col-sm-12">
     <p>
       <%= @proposal.content %>
     </p>
-  </li>
-  <li>
+
+
+
     <p>
       --Submitted by <%= @proposal.user.username %>
     </p>
-  </li>
-  </ul>
-</section>
+
+  </div>
 </div>
+
+  </section>
+  </div>
 </div>
