@@ -21,7 +21,11 @@ p {
 }
 
 .white-bg {
-  background-color: rgba(255,255,255, 0.5);
-  border: dashed 1px #ccc;
-  box-shadow: 5px 5px 5px #888888;
+  background-color: rgba(255,255,255, 0.7);
+  border: solid 1px #ccc;
+  box-shadow: 3px 3px 3px #888888;
+}
+
+#index {
+  padding: 4%;
 }
