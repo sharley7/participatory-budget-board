@@ -33,3 +33,24 @@ p {
 .row {
   padding-bottom: 20px;
 }
+
+.row #proposal ul {
+      list-style-type: none;
+}
+.row #proposal h2 {
+      font-size: 1.8em ;
+      color: #A9A9A9;
+}
+.row #proposal h3 {
+      font-size: 1.2em;
+      color: #808080;
+      font-weight: lighter;
+}
+
+.row #proposal hr {
+      adding: 0;
+      border: none;
+      border-top: medium double #A9A9A9;
+      color: #A9A9A9;
+      text-align: center;
+}
