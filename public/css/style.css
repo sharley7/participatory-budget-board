@@ -29,3 +29,7 @@ p {
 #index {
   padding: 4%;
 }
+
+.row {
+  padding-bottom: 20px;
+}
