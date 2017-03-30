@@ -44,7 +44,6 @@ class ProposalsController < ApplicationController
   post '/proposals/:id/vote' do
     @proposal = Proposal.find_by(params[:id])
     @proposal.vote
-     binding.pry
     redirect to '/proposals'
   end
 

@@ -4,7 +4,7 @@ belongs_to :neighborhood
 belongs_to :neighborhood_proposals
 
 
-  def self.vote
+  def vote
     self.vote_total += 1
   end
 
