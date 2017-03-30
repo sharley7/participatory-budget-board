@@ -28,11 +28,11 @@ class ProposalsController < ApplicationController
    end
  end
 
- get '/proposal/:id/edit' do
+ get '/proposals/:id/edit' do
    @proposal = Proposal.find_by(id: params[:id])
  end
 
- post '/proposal/:id/edit' do
+ post '/proposals/:id/edit' do
    if params[:title] == "" || params[:content] == "" || params[:neighborhood_id] == ""
      redirect to "/proposal/#{@proposal.id/edit}"
   else
@@ -41,10 +41,10 @@ class ProposalsController < ApplicationController
   end
  end
 
-
   post '/proposals/:id/vote' do
-    @proposal = find_by(params[:id])
+    @proposal = Proposal.find_by(params[:id])
     @proposal.vote
+     binding.pry
     redirect to '/proposals'
   end
 

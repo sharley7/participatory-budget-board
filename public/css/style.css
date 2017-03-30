@@ -86,11 +86,16 @@ p {
 }
 
 section {
-    padding: 1%;
+    padding: 3%;
+    margin: 3%;
 }
 
 #author p {
       color: #808080;
       font-weight: bolder;
       font-size: .9em;
+}
+
+#vote {
+
 }
