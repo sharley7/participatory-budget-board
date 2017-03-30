@@ -91,6 +91,6 @@ section {
 
 #author p {
       color: #808080;
-      font-weight: boldest;
-
+      font-weight: bolder;
+      font-size: .9em;
 }

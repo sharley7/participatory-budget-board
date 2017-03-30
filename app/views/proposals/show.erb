@@ -41,7 +41,10 @@
   </div>
 
   <div class="col-sm-2 col-sm-offset-6">
-    VOTE
+    <form method="post" action="/proposal/<%=@proposal.id%>/vote">
+    <input id="hidden" type="hidden" name="_method" value="post">
+    <input type="submit" id="vote" value="vote">
+    </form>
   </div>
 
 </div>
