@@ -50,7 +50,9 @@
         <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
           <% @user = User.find_by(id: session[:user_id]) %>
+            <% if @user != nil %>
         <li><a href="/users/<%=@user.username%>">My Profile</a></li>
+             <%end%>
         <%end%>
         <li><a href="/login">Login</a></li>
         <li><a href="/logout">Logout</a></li>
