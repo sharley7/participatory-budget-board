@@ -7,6 +7,9 @@
 
 <h2>Sign Up</h2>
 <hr class="single-line" />
+<% unless locals.empty? %>
+   <h5><%= message %></h5>
+<% end %>
 <form method="POST" action="/signup">
 <p><label>Username</label><br /><input type="text" name="username" id="username" /></p>
 <p><label>E-mail</label><br /><input type="email" name="email" id="email" /></p>

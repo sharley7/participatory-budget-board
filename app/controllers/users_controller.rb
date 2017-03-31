@@ -36,7 +36,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect to "/proposals"
     else
-      redirect to '/signup'
+      erb :'/signup',locals: {message: "We cannot find that account. Please sign up."}
     end
   end
 
