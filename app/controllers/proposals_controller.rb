@@ -57,10 +57,14 @@ class ProposalsController < ApplicationController
  end
 
   post '/proposals/:id/vote' do
-    @proposal = Proposal.find_by(id: params[:id])
-    @proposal.vote
-    @proposal.save
-    redirect to "/proposals/#{@proposal.id}"
+   if logged_in?
+      @proposal = Proposal.find_by(id: params[:id])
+      @proposal.vote
+      @proposal.save
+      redirect to "/proposals/#{@proposal.id}"
+    else
+      redirect to "/proposals/#{@proposal.id}"
+    end
   end
 
   get '/proposals' do
