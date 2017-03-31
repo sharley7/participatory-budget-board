@@ -1,6 +1,16 @@
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2 white-bg">
+    <section>
 
+
+<h2><%=@neighborhood.name%></h2>
+<hr class="single-line" />
+
+<% if @neighborhood.proposals.length == 0 %>
+
+<h4>There are no proposals for this neighborhood. <a href="/proposals/new">Add one now!</a></h4>
+
+<% else %>
 
     <% @neighborhood.proposals.all.each do |proposal| %>
     <div class="row">
@@ -78,9 +88,11 @@
 
   </div>
     <% end %>
+    <% end %>
 
        </div>
      </div>
+    </section>
     </section>
    </div>
 </div>
