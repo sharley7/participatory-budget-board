@@ -10,9 +10,13 @@ class ProposalsController < ApplicationController
   end
 
    get '/proposals/:id' do
+    if logged_in?
      @proposal = Proposal.find_by(id: params[:id])
      erb :'/proposals/show'
+   else
+     redirect to '/'
    end
+ end
 
 
    post '/proposals' do
