@@ -157,3 +157,19 @@ section {
   font-size: 1em;
   margin-right: 1%;
 }
+
+#warning {
+    background-color: #8b0000;
+    padding: 2%;
+    border: 2px solid #ccc;
+}
+
+#warning h5 {
+  font-size: 0.9em;
+  color: #fff;
+}
+
+h5 {
+  background-color: #8b0000;
+  color: #fff;
+}
