@@ -7,14 +7,13 @@
 
   <div class="row thin">
     <div class="col-sm-8">
-
       <h2><%= @proposal.title%></h2>
      </div>
    </div>
 
    <div class="row thin">
      <div class="col-sm-4">
-       <h3><%=@proposal.neighborhood.name%></h3>
+       <h3><a href="/neighborhoods/<%=@proposal.neighborhood.id%>"><%=@proposal.neighborhood.name%></a></h3>
       </div>
     </div>
 
