@@ -6,7 +6,7 @@
 
      <div class="row">
        <div class="col-sm-12">
-        <h2><%= @user.username %> </h2>
+        <h1><%= @user.username %> </h1>
         <h4>Neighborhood: <%=@user.neighborhood.name%></h3>
         <h4>Proposal Count: <%=@user.proposals.all.count%></h3>
         <hr class="single-line" />
@@ -15,21 +15,15 @@
 
 
     <% @user.proposals.all.each do |proposal| %>
-    <div class="row">
-      <div class="col-sm-12">
 
-
-
-      <section id="proposal">
-
-        <div class="row thin">
-          <div class="col-sm-8">
+        <div class="row thin" id="proposal">
+          <div class="col-sm-12">
 
             <h2><%= proposal.title%></h2></li>
            </div>
          </div>
 
-         <div class="row thin">
+         <div class="row thin" id="proposal">
            <div class="col-sm-4">
              <h3><%=proposal.neighborhood.name%></h3>
             </div>
@@ -86,13 +80,11 @@
 
 
         <hr class="single-line" />
+      </div>
     </div>
-
-  </div>
     <% end %>
 
-       </div>
-     </div>
+
     </section>
    </div>
 </div>

@@ -95,25 +95,6 @@ section {
     padding: 3%;
 }
 
-header {
-   top: 0;
-   background-color: #000000;
-   margin-bottom: 5%
-
-}
-
-header h1 {
-      font-size: 1em;
-      color: #fff;
-      margin-bottom: 0;
-}
-
-header h2 {
-     font-size: .8em;
-     color: #fff;
-     font-style: italic;
-     margin-bottom: 0;
-}
 
 #author p {
       color: #808080;
