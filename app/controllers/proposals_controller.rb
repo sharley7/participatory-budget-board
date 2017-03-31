@@ -31,7 +31,7 @@ class ProposalsController < ApplicationController
 
  post '/proposals/:id/edit' do
    if params[:title] == "" || params[:content] == "" || params[:neighborhood_id] == ""
-     redirect to "/proposal/#{@proposal.id/edit}"
+     erb :"/proposal/#{@proposal.id/edit}" , locals: {message: "Please do no leave any fields blank."}
   else
     @proposal.update
     redirect to "/proposal/#{@proposal.id}"

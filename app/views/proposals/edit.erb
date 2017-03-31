@@ -6,6 +6,9 @@
     <div class="col-sm-12">
       <h2>Edit your proposal</h2>
       <hr class="single-line" />
+      <% unless locals.empty? %>
+         <h5><%= message %></h5>
+    <% end %>
 
 
 <form method="POST" action="/proposals">
