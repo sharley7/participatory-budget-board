@@ -46,7 +46,18 @@
     </p>
   </div>
 
-  <div class="col-sm-2 col-sm-offset-6">
+  <div class="col-sm-6">
+    <% if @proposal.user.id == session[:user_id] %>
+    <a href="/proposals/<%=@proposal.id%>/edit"><button class="button">Edit proposal</button></a>
+   <form method="post" action="/proposals/<%=@proposal.id%>/delete">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="button" class="button" value="Delete proposal">
+    </form>
+    <% else %>
+    <%end%>
+  </div>
+
+  <div class="col-sm-2">
     <form method="post" action="/proposals/<%=@proposal.id%>/vote">
     <input id="hidden" type="hidden" name="_method" value="post">
     <input type="submit" id="vote" value="vote">

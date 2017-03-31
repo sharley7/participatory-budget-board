@@ -167,3 +167,12 @@ header h2 {
     font-size: 1.8em;
     font-weight: 800;
 }
+
+.button {
+  float: left;
+  background-color: white;
+  color: #808080;
+  border: 1px solid #808080;
+  font-size: 1em;
+  margin-right: 1%;
+}
