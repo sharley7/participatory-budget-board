@@ -68,8 +68,12 @@ class ProposalsController < ApplicationController
   end
 
   get '/proposals' do
+  if logged_in?
     @proposals = Proposal.all
     erb :'/proposals/proposals'
+  else
+    redirect to '/'
+  end
   end
 
 end
