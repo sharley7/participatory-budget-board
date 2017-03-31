@@ -1,18 +1,64 @@
-<ul>
 <% Proposal.all.each do |proposal| %>
-  <li><h2><%= proposal.title%></h2></li>
-    <li>
-      <h3>proposal.neighborhood.name</h3>
-    </li>
-  <li>
-    <p>
-      <%= proposal.content %>
-    </p>
-  </li>
-  <li>
-    <p>
-      --Submitted by <%= proposal.user.username %>
-    </p>
-  </li>
+  <div class="row">
+  <div class="col-sm-8 col-sm-offset-2 white-bg">
+
+
+  <section id="proposal">
+
+    <div class="row thin">
+      <div class="col-sm-8">
+
+        <h2><%= proposal.title%></h2></li>
+       </div>
+     </div>
+
+     <div class="row thin">
+       <div class="col-sm-4">
+         <h3><%=proposal.neighborhood.name%></h3>
+        </div>
+      </div>
+
+      <div class="row" id="bar">
+        <div class="col-sm-12">
+          <hr class="single-line" />
+        </div>
+      </div>
+
+  <div class="row thin">
+    <div class="col-sm-12">
+      <p>
+        <%= proposal.content %>
+      </p>
+
+    </div>
+  </div>
+
+  <div class="row" id="bar">
+    <div class="col-sm-12">
+      <hr class="single-line" />
+    </div>
+  </div>
+
+  <div class="row thin">
+    <div class="col-sm-4" id="author">
+      <p>
+        Submitted by <%= proposal.user.username %>
+      </p>
+    </div>
+
+    <div class="col-sm-2 col-sm-offset-6">
+      <form method="post" action="/proposals/<%=proposal.id%>/vote">
+      <input id="hidden" type="hidden" name="_method" value="post">
+      <input type="submit" id="vote" value="vote">
+      <input type="button" id="vote_total" value="<%=proposal.vote_total%>">
+      </form>
+    </div>
+
+  </div>
+
+    </section>
+
+  </div>
+  </div>
+
 <% end %>
-  </ul>
