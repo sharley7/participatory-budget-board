@@ -52,6 +52,7 @@ class ProposalsController < ApplicationController
   end
 
   get '/proposals' do
+    @proposals = Proposal.all
     erb :'/proposals/proposals'
   end
 
