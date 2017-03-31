@@ -47,9 +47,13 @@ class ProposalsController < ApplicationController
  end
 
  delete '/proposals/:id/delete' do
-   @proposal = Proposal.find_by(id: params[:id])
-   @proposal.delete
-   redirect to '/proposals'
+   if logged_in? && session[:user_id] ==        @proposal.user.id
+       @proposal = Proposal.find_by(id: params[:id])
+       @proposal.delete
+       redirect to '/proposals'
+    else
+      redirect to "/proposal/#{@proposal.id}"
+ end
  end
 
   post '/proposals/:id/vote' do
