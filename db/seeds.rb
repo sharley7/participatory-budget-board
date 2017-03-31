@@ -82,9 +82,24 @@ proposals_list = {
     },
     "More bike lanes" => {
       :content => "More bike lanes would make it easier to get around the neighborhood.",
-      :user_id => 3,
+    :user_id => 3,
       :neighborhood_id => 8
     },
+    "New computer lab at PS 261" => {
+      :content => "It would be great it students had an updated computer lab to learn and work in.",
+      :user_id => 2,
+      :neighborhood_id => 13,
+    }
+    "New sign for the library" => {
+      :content => "The current sign is old and falling apart. A new fresh sign would improve the look of the area.",
+      :user_id => 6,
+      :neighborhood_id => 11,
+    }
+    "Gondola rides on the Gowanus Canal" => {
+      :content => "Gondola rides would be a charming way for tourists to travel through the neighborhood. We could probably charge a premium.",
+      :user_id => 4,
+      :neighborhood_id => 17,
+    }
   }
 
   proposals_list.each do |title, details|
