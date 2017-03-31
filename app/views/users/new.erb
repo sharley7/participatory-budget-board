@@ -1,17 +1,34 @@
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2 white-bg">
+
+<section>
+  <div class="row">
+    <div class="col-sm-12">
+
+<h2>Sign Up</h2>
+<hr class="single-line" />
 <form method="POST" action="/signup">
-<p><label>Username:</label> <input type="text" name="username" id="username" /></p>
-<p><label>E-mail:</label> <input type="email" name="email" id="email" /></p>
-<p><label>Password:</label> <input type="password" name="password" id="password" /></p>
-<p><label>Select your neighborhood:</label>
-    <br />
-    <p><label>Select the neighborhood:</label>
+<p><label>Username</label><br /><input type="text" name="username" id="username" /></p>
+<p><label>E-mail</label><br /><input type="email" name="email" id="email" /></p>
+<p><label>Password</label><br /><input type="password" name="password" id="password" /></p>
+    <p><label>Select your neighborhood:</label>
         <br />
-         <select name="neighborhoods">
+         <select name="neighborhood_id">
           <% Neighborhood.all.each do |neighborhood| %>
-              <option name="neighborhood_id"  id="neighborhood_<%=neighborhood.id%>" value="<%=neighborhood.id%>" > <%=neighborhood.name%></option>
+              <option id="neighborhood_<%=neighborhood.id%>" value="<%=neighborhood.id%>" > <%=neighborhood.name%></option>
              <% end %>
-        </select></p>
+          </select>
+        </p>
 
 <p>
-<input type="submit" value="Sign Up" />
+<input type="submit" class="button" value="Sign Up" />
 </form></p>
+
+
+</div>
+</div>
+
+</section>
+
+</div>
+</div>
