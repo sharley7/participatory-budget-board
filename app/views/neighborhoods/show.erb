@@ -1,98 +1,104 @@
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2 white-bg">
     <section>
+     <div class="row">
+        <div class="col-sm-12">
+          <h2><%=@neighborhood.name%></h2>
+            <hr class="single-line" />
+
+              <% if @neighborhood.proposals.length == 0 %>
+
+               <h4>There are no proposals for this neighborhood. <a href="/proposals/new">Add one now!</a></h4>
+
+               <% else %>
+               <h4>Proposal Count: <%=@neighborhood.proposals.all.count%></h4>
+               <h4>Registered Members: <%=@neighborhood.users.all.count%></h4>
+               <% end %>
+            </div>
+          </div>
+
+        </section>
+        </div>
+      </div>
 
 
-<h2><%=@neighborhood.name%></h2>
-<hr class="single-line" />
 
-<% if @neighborhood.proposals.length == 0 %>
-
-<h4>There are no proposals for this neighborhood. <a href="/proposals/new">Add one now!</a></h4>
-
-<% else %>
-
+  <% if @neighborhood.proposals.length != 0 %>
     <% @neighborhood.proposals.all.each do |proposal| %>
     <div class="row">
-      <div class="col-sm-12">
+    <div class="col-sm-8 col-sm-offset-2 white-bg">
 
 
+    <section id="proposal">
 
-      <section id="proposal">
+      <div class="row thin">
+        <div class="col-sm-8">
 
-        <div class="row thin">
-          <div class="col-sm-8">
-
-            <h2><%= proposal.title%></h2></li>
-           </div>
+          <h2><%= proposal.title%></h2></li>
          </div>
+       </div>
 
-         <div class="row thin">
-           <div class="col-sm-4">
-             <h3><%=proposal.neighborhood.name%></h3>
-            </div>
+       <div class="row thin">
+         <div class="col-sm-4">
+           <h3><%=proposal.neighborhood.name%></h3>
           </div>
+        </div>
 
-          <div class="row" id="bar">
-            <div class="col-sm-12">
-              <hr class="single-line" />
-            </div>
+        <div class="row" id="bar">
+          <div class="col-sm-12">
+            <hr class="single-line" />
           </div>
-
-      <div class="row thin">
-        <div class="col-sm-12">
-          <p>
-            <%= proposal.content %>
-          </p>
-
-        </div>
-      </div>
-
-      <div class="row" id="bar">
-        <div class="col-sm-12">
-          <hr class="single-line" />
-        </div>
-      </div>
-
-      <div class="row thin">
-        <div class="col-sm-4" id="author">
-          <p>
-            Submitted by <%= proposal.user.username %>
-          </p>
         </div>
 
-        <div class="col-sm-6">
-          <% if proposal.user.id == session[:user_id] %>
-          <a href="/proposals/<%=proposal.id%>/edit"><button class="button">Edit proposal</button></a>
-         <form method="post" action="/proposals/<%=proposal.id%>/delete">
-          <input id="hidden" type="hidden" name="_method" value="delete">
-          <input type="submit" class="button" value="Delete proposal">
-          </form>
-          <% else %>
-          <%end%>
-        </div>
-
-        <div class="col-sm-2">
-          <form method="post" action="/proposals/<%=proposal.id%>/vote">
-          <input id="hidden" type="hidden" name="_method" value="post">
-          <input type="submit" id="vote" value="vote">
-          <input type="button" id="vote_total" value="<%=proposal.vote_total%>">
-          </form>
-        </div>
+    <div class="row thin">
+      <div class="col-sm-12">
+        <p>
+          <%= proposal.content %>
+        </p>
 
       </div>
-
-
-        <hr class="single-line" />
     </div>
 
-  </div>
-    <% end %>
-    <% end %>
+    <div class="row" id="bar">
+      <div class="col-sm-12">
+        <hr class="single-line" />
+      </div>
+    </div>
 
-       </div>
-     </div>
-    </section>
-    </section>
+    <div class="row thin">
+      <div class="col-sm-4" id="author">
+        <p>
+          Submitted by <a href="/users/<%=proposal.user.slug%>"><%= proposal.user.username %></a>
+        </p>
+      </div>
+
+      <div class="col-sm-6">
+        <% if proposal.user.id == session[:user_id] %>
+        <a href="/proposals/<%=proposal.id%>/edit"><button class="button">Edit proposal</button></a>
+       <form method="post" action="/proposals/<%=proposal.id%>/delete">
+        <input id="hidden" type="hidden" name="_method" value="delete">
+        <input type="submit" class="button" value="Delete proposal">
+        </form>
+        <% else %>
+        <%end%>
+      </div>
+
+      <div class="col-sm-2">
+        <form method="post" action="/proposals/<%=proposal.id%>/vote">
+        <input id="hidden" type="hidden" name="_method" value="post">
+        <input type="submit" id="vote" value="vote">
+        <input type="button" id="vote_total" value="<%=proposal.vote_total%>">
+        </form>
+      </div>
+
+    </div>
+
+      </section>
+
+    </div>
+    </div>
+  <% end %>
+<% end %>
+
    </div>
 </div>
