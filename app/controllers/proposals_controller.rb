@@ -20,7 +20,7 @@ class ProposalsController < ApplicationController
          redirect to '/proposals/new'
       else
         @proposal = Proposal.create(title: params[:title], content: params[:content], neighborhood_id: params[:neighborhood_id], user_id: params[:user_id])
-         binding.pry
+        binding.pry
         redirect to "/proposals/#{@proposal.id}"
    end
  end

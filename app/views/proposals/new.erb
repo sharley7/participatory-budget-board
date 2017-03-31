@@ -6,11 +6,12 @@
 <p><label>Your proposal:</label> <textarea name="content" id="content" placeholder="I propose...." /></textarea></p>
 <p><label>Select the neighborhood:</label>
     <br />
-     <select name="neighborhoods">
+     <select name="neighborhood_id">
       <% Neighborhood.all.each do |neighborhood| %>
-          <option name="neighborhood_id"  id="neighborhood_<%=neighborhood.id%>" value="<%=neighborhood.id%>" > <%=neighborhood.name%></option>
+          <option id="neighborhood_<%=neighborhood.id%>" value="<%=neighborhood.id%>" > <%=neighborhood.name%></option>
          <% end %>
-    </select>
+      </select>
+    </p>
 
 
 
