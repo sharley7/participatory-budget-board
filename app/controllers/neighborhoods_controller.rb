@@ -10,5 +10,4 @@ class NeighborhoodsController < ApplicationController
     erb :"/neighborhoods/show"
   end
 
-
 end
