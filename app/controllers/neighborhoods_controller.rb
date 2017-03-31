@@ -6,8 +6,8 @@ class NeighborhoodsController < ApplicationController
   end
 
   get '/neighborhoods/:id' do
-  @neighborhood = Neighborhood.find_by(id: params[:id])
-  erb :"/neighborhoods/show"
+    @neighborhood = Neighborhood.find_by(id: params[:id])
+    erb :"/neighborhoods/show"
   end
 
 
