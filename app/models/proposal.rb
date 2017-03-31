@@ -1,7 +1,7 @@
 class Proposal < ActiveRecord::Base
 belongs_to :user
 belongs_to :neighborhood
-belongs_to :neighborhood_proposals
+
 
 
   def vote

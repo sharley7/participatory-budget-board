@@ -4,7 +4,6 @@ belongs_to :neighborhood
 
   has_secure_password
 
-
   def slug
     username.downcase.gsub(" ","-")
   end
