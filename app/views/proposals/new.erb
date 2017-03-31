@@ -6,9 +6,14 @@
 <p><label>Your proposal:</label> <textarea name="content" id="content" placeholder="I propose...." /></textarea></p>
 <p><label>Select the neighborhood:</label>
     <br />
-  <% Neighborhood.all.each do |neighborhood| %>
-  <input type="radio" name="neighborhood_id"  id="neighborhood_<%=neighborhood.id%>" value="<%=neighborhood.id%>" > <%=neighborhood.name%></input>
-  <% end %></p>
+     <select name="neighborhoods">
+      <% Neighborhood.all.each do |neighborhood| %>
+          <option name="neighborhood_id"  id="neighborhood_<%=neighborhood.id%>" value="<%=neighborhood.id%>" > <%=neighborhood.name%></option>
+         <% end %>
+    </select>
+
+
+
   <input type="hidden" value="<%=session[:user_id]%>" name="user_id">
 
 <p>
