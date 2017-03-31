@@ -1,0 +1,25 @@
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2 white-bg">
+
+<section>
+  <div class="row">
+    <div class="col-sm-12">
+
+<h2>Neighborhoods</h2>
+<hr class="single-line" />
+<ul>
+  <% @neighborhoods.each do | neighborhood | %>
+  <li>
+    <a href="/neighborhoods/#{neighborhood.id}"><%=neighborhood.name%></a>
+  </li>
+  <%end%>
+</ul>
+
+
+</div>
+</div>
+
+</section>
+
+</div>
+</div>
