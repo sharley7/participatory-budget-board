@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   post '/signup' do
     if params[:username] == "" || params[:email] == "" || params[:password] == "" || params[:neighborhood_id] == ""
 
-      erb :'/signup',locals: {message: "Please do no leave any fields blank."}
+      erb :'/users/new',locals: {message: "Please do no leave any fields blank."}
 
     else
       @user = User.new(username: params[:username], email: params[:email], password: params[:password], neighborhood_id: params[:neighborhood_id])
