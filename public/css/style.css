@@ -139,6 +139,31 @@ header h2 {
 
 }
 
-.left-line {
+.right-line {
   border-right: 1px solid #808080;
+}
+
+#index-top h3 {
+     font-size: 2.1em;
+     font-color: #808080;
+     font-style: italic;
+     font-weight: bold;
+     text-align: center;
+     padding-bottom: 2%;
+}
+
+#index-intro p {
+    color: #A9A9A9;
+    line-height: 1.3em;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.index-columns {
+  text-align: center;
+}
+
+.index-columns a {
+    font-size: 1.8em;
+    font-weight: 800;
 }
