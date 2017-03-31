@@ -2,10 +2,12 @@
 <div class="col-sm-8 col-sm-offset-2 white-bg">
 
 <section>
+  <h2>Create your proposal</h2>
+  <hr class="single-line" />
 <form method="POST" action="/proposals">
-<p><label>Title:</label> <input type="text" name="title" id="title" placeholder="Give our proposal a title" /></p>
-<p><label>Your proposal:</label> <textarea name="content" id="content" placeholder="I propose...." /></textarea></p>
-<p><label>Select the neighborhood:</label>
+<p><label>Title</label><br /><input type="text" name="title" id="title" placeholder="Give your proposal a title" size="36"/></p>
+<p><label>Your proposal</label> <br /><textarea name="content" id="content" rows="4" cols="35" placeholder="I propose...." /></textarea></p>
+<p><label>Select the neighborhood</label>
     <br />
      <select name="neighborhood_id">
       <% Neighborhood.all.each do |neighborhood| %>
