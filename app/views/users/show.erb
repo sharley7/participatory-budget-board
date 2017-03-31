@@ -8,7 +8,7 @@
        <div class="col-sm-12">
         <h1><%= @user.username %> </h1>
         <hr class="single-line" />
-        <h4>Neighborhood: <%=@user.neighborhood.name%></h3>
+        <h4>Neighborhood: <a href="/neighborhoods/<%=@user.neighborhood.id%>"><%=@user.neighborhood.name%></a></h3>
         <h4>Proposal Count: <%=@user.proposals.all.count%></h3>
 
       </div>
