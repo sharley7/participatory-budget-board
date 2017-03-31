@@ -111,6 +111,7 @@ section {
 }
 
 #vote_total {
+  display: block;
   float: left;
   background-color: white;
   color: #808080;
@@ -119,6 +120,21 @@ section {
   font-size: 1em;
 
 }
+@media only screen and (min-width: 768px) and (max-width: 981px) {
+
+  #vote_total {
+    display: none;
+  }
+  #vote {
+       background-color: white;
+       color: #808080;
+       border: 1px solid #808080;
+       font-size: 1em;
+       float: left;
+  }
+
+}
+
 
 .right-line {
   border-right: 1px solid #808080;
@@ -156,20 +172,4 @@ section {
   border: 1px solid #808080;
   font-size: 1em;
   margin-right: 1%;
-}
-
-#warning {
-    background-color: #8b0000;
-    padding: 2%;
-    border: 2px solid #ccc;
-}
-
-#warning h5 {
-  font-size: 0.9em;
-  color: #fff;
-}
-
-h5 {
-  background-color: #8b0000;
-  color: #fff;
 }
