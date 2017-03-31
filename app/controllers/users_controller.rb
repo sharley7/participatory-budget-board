@@ -36,9 +36,9 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect to "/proposals"
     elsif params[:username] == "" || params[:password] == "" || params[:username] =="" || params[:neighborhood_id] == ""
-        erb :'/login',locals: {message: "Please do no leave any fields blank."}
+        erb :'/users/login',locals: {message: "Please do no leave any fields blank."}
     else
-      erb :'/signup',locals: {message: "We cannot find that account. Please sign up."}
+      erb :'/users/new',locals: {message: "We cannot find that account. Please sign up."}
     end
   end
 
