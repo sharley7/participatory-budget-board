@@ -1,0 +1,39 @@
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2 white-bg">
+
+<section>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Edit your proposal</h2>
+      <hr class="single-line" />
+
+
+
+<form method="POST" action="/proposals">
+<p><label>Title</label> <br /><input type="text" name="title" id="title" value="<%=@proposal.title%>" size="<%=(@proposal.title.length) + 5%>" /></p>
+<p><label>Your proposal</label> <br /><textarea name="content" id="content" rows="4" cols="35" /><%=@proposal.content%></textarea></p>
+<p><label>Select the neighborhood:</label>
+    <br />
+     <select name="neighborhood_id">
+      <% Neighborhood.all.each do |neighborhood| %>
+          <option id="neighborhood_<%=neighborhood.id%>" value="<%=neighborhood.id%>"  <%='selected' if @proposal.neighborhood_id == neighborhood.id %>  > <%=neighborhood.name%></option>
+         <% end %>
+      </select>
+    </p>
+
+
+
+  <input type="hidden" value="<%=session[:user_id]%>" name="user_id">
+
+<p>
+<input type="submit" value="Edit" />
+</form></p>
+
+
+</div>
+</div>
+
+</section>
+
+</div>
+</div>
