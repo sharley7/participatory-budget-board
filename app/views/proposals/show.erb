@@ -51,7 +51,7 @@
     <a href="/proposals/<%=@proposal.id%>/edit"><button class="button">Edit proposal</button></a>
    <form method="post" action="/proposals/<%=@proposal.id%>/delete">
     <input id="hidden" type="hidden" name="_method" value="delete">
-    <input type="button" class="button" value="Delete proposal">
+    <input type="submit" class="button" value="Delete proposal">
     </form>
     <% else %>
     <%end%>
