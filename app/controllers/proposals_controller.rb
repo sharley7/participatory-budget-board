@@ -28,10 +28,10 @@ class ProposalsController < ApplicationController
    end
  end
 
- get '/proposals/:id/edit' do
-   @proposal = Proposal.find_by(id: params[:id])
+  get '/proposals/:id/edit' do
+    @proposal = Proposal.find_by(id: params[:id])
      if logged_in? && session[:user_id] == @proposal.user.id
-        erb :'/proposals/edit'
+       erb :'/proposals/edit'
      else
        redirect to "/proposals/#{@proposal.id}"
     end
@@ -40,21 +40,21 @@ class ProposalsController < ApplicationController
  post '/proposals/:id/edit' do
    if params[:title] == "" || params[:content] == "" || params[:neighborhood_id] == ""
      erb :'/proposals/edit', locals: {message: "Please do no leave any fields blank."}
-  else
+   else
     @proposal.update
     redirect to "/proposal/#{@proposal.id}"
+   end
   end
- end
 
  delete '/proposals/:id/delete' do
-   if logged_in? && session[:user_id] ==        @proposal.user.id
-       @proposal = Proposal.find_by(id: params[:id])
-       @proposal.delete
-       redirect to '/proposals'
+   if logged_in? && session[:user_id] == @proposal.user.id
+      @proposal = Proposal.find_by(id: params[:id])
+      @proposal.delete
+      redirect to '/proposals'
     else
       redirect to "/proposal/#{@proposal.id}"
- end
- end
+    end
+  end
 
   post '/proposals/:id/vote' do
    if logged_in?
@@ -68,12 +68,12 @@ class ProposalsController < ApplicationController
   end
 
   get '/proposals' do
-  if logged_in?
+   if logged_in?
     @proposals = Proposal.all
     erb :'/proposals/proposals'
-  else
+   else
     redirect to '/'
-  end
+   end
   end
 
 end
