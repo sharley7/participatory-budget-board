@@ -1,3 +1,5 @@
+/*///// Full Background ////////*/
+
 #background {
     position: fixed;
     top: 50%;
@@ -21,10 +23,43 @@
   background-size: cover;
 }
 
+/*///// Headline Styles////////*/
+
 
 .col-md-12 h1 {
     color: #FF69B4;
 }
+
+#proposal p {
+  color: #808080;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+#index-top h3 {
+     font-size: 2.1em;
+     font-color: #808080;
+     font-style: italic;
+     font-weight: bold;
+     text-align: center;
+     padding-bottom: 2%;
+}
+
+#index-intro p {
+    color: #A9A9A9;
+    line-height: 1.3em;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+
+#author p {
+      color: #808080;
+      font-weight: bolder;
+      font-size: 1em;
+}
+
+/*///// Section Styles////////*/
 
 .white-bg {
   background-color: rgb(255,255,255);
@@ -45,13 +80,11 @@
   margin: 0;
 }
 
-
 .row #proposal h2 {
       font-size: 2 em ;
       color: #000000;
       font-weight: bolder;
       margin-bottom: 3%;
-
 }
 .row #proposal h3 {
       font-size: 1em;
@@ -61,6 +94,17 @@
       font-style: italic;
 }
 
+.index-columns {
+  text-align: center;
+}
+
+.index-columns a {
+    font-size: 1.8em;
+    font-weight: 800;
+}
+
+
+/*///// Line Styles////////*/
 .double-line {
       margin-top: 2%;
       margin-bottom: 2%
@@ -81,11 +125,11 @@
 
 }
 
-#proposal p {
-  color: #808080;
-  font-size: 1.2em;
-  line-height: 1.5em;
+.right-line {
+  border-right: 1px solid #808080;
 }
+
+
 
 .row #bar {
        padding-bottom: 0px;
@@ -96,11 +140,6 @@ section {
 }
 
 
-#author p {
-      color: #808080;
-      font-weight: bolder;
-      font-size: 1em;
-}
 
 /*///// Buttons ////////*/
 #vote {
@@ -145,34 +184,4 @@ section {
        float: left;
   }
 
-}
-
-
-.right-line {
-  border-right: 1px solid #808080;
-}
-
-#index-top h3 {
-     font-size: 2.1em;
-     font-color: #808080;
-     font-style: italic;
-     font-weight: bold;
-     text-align: center;
-     padding-bottom: 2%;
-}
-
-#index-intro p {
-    color: #A9A9A9;
-    line-height: 1.3em;
-    font-size: 0.9em;
-    text-align: center;
-}
-
-.index-columns {
-  text-align: center;
-}
-
-.index-columns a {
-    font-size: 1.8em;
-    font-weight: 800;
 }

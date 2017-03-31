@@ -22,23 +22,22 @@
       </div>
     </div>
 
-<div class="row thin">
-  <div class="col-sm-12">
-    <p>
-      <%= @proposal.content %>
-    </p>
-
+   <div class="row thin">
+    <div class="col-sm-12">
+      <p>
+       <%= @proposal.content %>
+      </p>
+    </div>
   </div>
-</div>
 
-<div class="row" id="bar">
-  <div class="col-sm-12">
+  <div class="row" id="bar">
+   <div class="col-sm-12">
     <hr class="single-line" />
+   </div>
   </div>
-</div>
 
-<div class="row thin">
-  <div class="col-sm-4" id="author">
+  <div class="row thin">
+   <div class="col-sm-4" id="author">
     <p>
       Submitted by <a href="/users/<%=@proposal.user.slug%>"><%= @proposal.user.username %></a>
     </p>
@@ -46,27 +45,25 @@
 
   <div class="col-sm-6">
     <% if @proposal.user.id == session[:user_id] %>
-    <a href="/proposals/<%=@proposal.id%>/edit"><button class="button">Edit proposal</button></a>
-   <form method="post" action="/proposals/<%=@proposal.id%>/delete">
-    <input id="hidden" type="hidden" name="_method" value="delete">
-    <input type="submit" class="button" value="Delete proposal">
-    </form>
+      <a href="/proposals/<%=@proposal.id%>/edit"><button class="button">Edit proposal</button></a>
+      <form method="post" action="/proposals/<%=@proposal.id%>/delete">
+        <input id="hidden" type="hidden" name="_method" value="delete">
+        <input type="submit" class="button" value="Delete proposal">
+      </form>
     <% else %>
     <%end%>
   </div>
 
-  <div class="col-sm-2">
-    <form method="post" action="/proposals/<%=@proposal.id%>/vote">
-    <input id="hidden" type="hidden" name="_method" value="post">
-    <input type="submit" id="vote" value="vote">
-    <input type="button" id="vote_total" value="<%=@proposal.vote_total%>">
-    </form>
-
-        </div>
-
-     </div>
+   <div class="col-sm-2">
+     <form method="post" action="/proposals/<%=@proposal.id%>/vote">
+      <input id="hidden" type="hidden" name="_method" value="post">
+      <input type="submit" id="vote" value="vote">
+      <input type="button" id="vote_total" value="<%=@proposal.vote_total%>">
+     </form>
+    </div>
+   </div>
 
   </section>
 <!-- end proposal box -->
-</div>
+ </div>
 </div>
