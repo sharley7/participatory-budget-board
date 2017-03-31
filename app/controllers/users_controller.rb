@@ -13,13 +13,13 @@ class UsersController < ApplicationController
 
       erb :'/users/new',locals: {message: "Please do no leave any fields blank."}
 
-    else
-      @user = User.new(username: params[:username], email: params[:email], password: params[:password], neighborhood_id: params[:neighborhood_id])
+     else
+       @user = User.new(username: params[:username], email: params[:email], password: params[:password], neighborhood_id: params[:neighborhood_id])
       @user.save
       session[:user_id] = @user.id
       redirect to '/proposals'
-    end
-  end
+     end
+   end
 
   get '/login' do
     if logged_in?
