@@ -40,6 +40,7 @@ class ProposalsController < ApplicationController
 
  post '/proposals/:id/delete' do
    @proposal = Proposal.find_by(id: params[:id])
+   @proposal.delete
    redirect to '/proposals'
  end
 
