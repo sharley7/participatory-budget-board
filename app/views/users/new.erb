@@ -4,9 +4,13 @@
 <p><label>Password:</label> <input type="password" name="password" id="password" /></p>
 <p><label>Select your neighborhood:</label>
     <br />
-  <% Neighborhood.all.each do |neighborhood| %>
-  <input type="radio" name="neighborhood_id"  id="neighborhood_<%=neighborhood.id%>" value="<%=neighborhood.id%>" > <%=neighborhood.name%></input>
-  <% end %></p>
+    <p><label>Select the neighborhood:</label>
+        <br />
+         <select name="neighborhoods">
+          <% Neighborhood.all.each do |neighborhood| %>
+              <option name="neighborhood_id"  id="neighborhood_<%=neighborhood.id%>" value="<%=neighborhood.id%>" > <%=neighborhood.name%></option>
+             <% end %>
+        </select></p>
 
 <p>
 <input type="submit" value="Sign Up" />
