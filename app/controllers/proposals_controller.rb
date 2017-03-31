@@ -30,7 +30,11 @@ class ProposalsController < ApplicationController
 
  get '/proposals/:id/edit' do
    @proposal = Proposal.find_by(id: params[:id])
-   erb :'/proposals/edit'
+     if logged_in? && session[:user_id] == @proposal.user.id
+        erb :'/proposals/edit'
+     else
+       redirect to "/proposals/#{@proposal.id}"
+    end
  end
 
  post '/proposals/:id/edit' do
