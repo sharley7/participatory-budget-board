@@ -37,12 +37,12 @@ class ProposalsController < ApplicationController
     end
  end
 
- post '/proposals/:id/edit' do
+ post '/proposals/:id' do
    @proposal = Proposal.find_by(id: params[:id])
    if params[:title] == "" || params[:content] == "" || params[:neighborhood_id] == ""
      erb :'/proposals/edit', locals: {message: "Please do no leave any fields blank."}
    else
-    @proposal.update
+    @proposal.update(title: params[:title], content: params[:content], neighborhood_id: params[:neighborhood_id])
     redirect to "/proposal/#{@proposal.id}"
    end
   end
