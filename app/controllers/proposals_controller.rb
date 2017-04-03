@@ -54,7 +54,7 @@ class ProposalsController < ApplicationController
       @proposal.delete
       redirect to '/proposals'
     else
-      redirect to "/proposal/#{@proposal.id}"
+      redirect to "/proposals/#{@proposal.id}"
     end
   end
 
