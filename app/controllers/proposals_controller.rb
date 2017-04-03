@@ -63,7 +63,7 @@ class ProposalsController < ApplicationController
       @proposal = Proposal.find_by(id: params[:id])
       @proposal.vote
       @proposal.save
-      redirect to "/proposals"
+      redirect to "/proposals/#{@proposal.id}"
     else
       redirect to "/proposals"
     end
