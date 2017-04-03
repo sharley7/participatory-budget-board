@@ -38,6 +38,7 @@ class ProposalsController < ApplicationController
  end
 
  post '/proposals/:id/edit' do
+   @proposal = Proposal.find_by(id: params[:id])
    if params[:title] == "" || params[:content] == "" || params[:neighborhood_id] == ""
      erb :'/proposals/edit', locals: {message: "Please do no leave any fields blank."}
    else
@@ -47,6 +48,7 @@ class ProposalsController < ApplicationController
   end
 
  delete '/proposals/:id/delete' do
+   @proposal = Proposal.find_by(id: params[:id])
    if logged_in? && session[:user_id] == @proposal.user.id
       @proposal = Proposal.find_by(id: params[:id])
       @proposal.delete
