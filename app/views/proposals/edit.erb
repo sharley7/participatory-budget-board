@@ -11,7 +11,7 @@
     <% end %>
 
 
-<form method="POST" action="/proposals">
+<form method="POST" action="/proposals/<%=@proposal.id%>">
 <p><label>Title</label> <br /><input type="text" name="title" id="title" value="<%=@proposal.title%>" size="<%=(@proposal.title.length) + 5%>" /></p>
 <p><label>Your proposal</label> <br /><textarea name="content" id="content" rows="4" cols="35" /><%=@proposal.content%></textarea></p>
 <p><label>Select the neighborhood:</label>

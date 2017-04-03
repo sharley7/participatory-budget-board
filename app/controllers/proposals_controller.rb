@@ -43,7 +43,7 @@ class ProposalsController < ApplicationController
      erb :'/proposals/edit', locals: {message: "Please do no leave any fields blank."}
    else
     @proposal.update(title: params[:title], content: params[:content], neighborhood_id: params[:neighborhood_id])
-    redirect to "/proposal/#{@proposal.id}"
+    redirect to "/proposals/#{@proposal.id}"
    end
   end
 
