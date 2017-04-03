@@ -28,7 +28,8 @@ rake db:seed
 * Ruby
 * Bootstrap
 * Sinatra
-* Active Record
+* ActiveRecord
+* Sqlite3
 
 ## Demo
 A live version of this app can be found [on Heroku](https://hidden-peak-77304.herokuapp.com/).
