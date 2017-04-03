@@ -30,6 +30,10 @@ rake db:seed
 * Sinatra
 * Active Record
 
+## Demo
+A live version of this app can be found [on Heroku](https://hidden-peak-77304.herokuapp.com/).
+
+
 ## Contributing
 Contributions are welcome. Please submit a pull request with any proposed pages.
 
